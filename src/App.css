@@ -4,6 +4,10 @@
 
 h1{
   text-align: center;
+  background:linear-gradient(45deg,#0ef, purple) ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .App-logo {
