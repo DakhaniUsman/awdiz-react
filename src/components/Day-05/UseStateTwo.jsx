@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function UseStateTwo() {
   const [loggedin, setloggedin] = useState(true);
@@ -15,8 +15,21 @@ function UseStateTwo() {
   }
 
   function Toggleloggedin() {
-    setloggedin(!loggedin);   // set the value opposite to original value
+    setloggedin(!loggedin); // set the value opposite to original value
   }
+
+  useEffect(() => {
+    console.log("Use Effect is triggered");
+  });
+
+  // no dependency use effect 
+
+  // it allows u to run a side effect in function component
+
+  // it depends on two factor
+  // it trigger on initial render
+  // it triggers on every state change
+
   return (
     <div>
       <h1>Use State Two</h1>
