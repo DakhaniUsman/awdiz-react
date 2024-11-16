@@ -20,9 +20,10 @@ function UseStateTwo() {
 
   useEffect(() => {
     console.log("Use Effect is triggered");
+    alert("You are being tracked!!")
   });
 
-  // no dependency use effect 
+  // no dependency use effect
 
   // it allows u to run a side effect in function component
 
