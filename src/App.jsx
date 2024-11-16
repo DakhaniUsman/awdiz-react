@@ -6,6 +6,7 @@ import Register from "./components/Register";
 import NotFound from "./components/NotFound";
 import Product from "./components/Product";
 import UseState from "./components/Day-03/UseState";
+import UseStateTwo from "./components/Day-05/UseStateTwo";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/product" element={<Product />} />
         <Route path="/use-state" element={<UseState />} />
+        <Route path="/use-state-two" element={<UseStateTwo />} />
       </Routes>
     </div>
   );

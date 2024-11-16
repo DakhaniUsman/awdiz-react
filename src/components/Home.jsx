@@ -16,14 +16,19 @@ function Home() {
     router("/use-state");
   }
 
+  function UseStateTwo() {
+    router("/use-state-two");
+  }
+
   return (
     <div>
       <h1>Welcome To Home Page</h1>
-      <button onClick={LoginPage}>Login</button> 
+      <button onClick={LoginPage}>Login</button>
       {/* onclick event that will run the function*/}
       <button onClick={RegisterPage}>Register</button>
       <button onClick={ProductPage}>Product</button>
       <button onClick={UseStatePage}>Use State</button>
+      <button onClick={UseStateTwo}>Use State Two</button>
     </div>
   );
 }
