@@ -8,6 +8,8 @@ import Product from "./components/Product";
 import UseState from "./components/Day-03/UseState";
 import UseStateTwo from "./components/Day-05/UseStateTwo";
 import UseEffect from "./components/Day-06/UseEffect";
+import UseEffect3 from "./components/Day-06/UseEffect3";
+import UseEffect4 from "./components/Day-06/UseEffect4";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/use-state" element={<UseState />} />
         <Route path="/use-state-two" element={<UseStateTwo />} />
         <Route path="/use-effect" element={<UseEffect />} />
+        <Route path="/use-effect-3" element={<UseEffect3 />} />
+        <Route path="/use-effect-4" element={<UseEffect4 />} />
       </Routes>
     </div>
   );

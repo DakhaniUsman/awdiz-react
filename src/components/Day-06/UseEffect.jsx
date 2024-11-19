@@ -1,25 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function UseEffect() {
+  const [counter, setCounter] = useState(1);
 
-    const [counter, setCounter] = useState(1);
+  function Increment() {
+    setCounter(counter + 1);
+  }
 
-    function Increment() {
+  useEffect(() => {
+    console.log("use effect is triggered");
+    alert("Use effect is triggered");
+  }, []); // empty dependency
 
-        setCounter(counter + 1);
-    }
+  return (
+    <div>
+      <h1>Use Effect</h1>
 
-    return (
+      <h1>Counter : {counter}</h1>
 
-        <div>
-            <h1>Use Effect</h1>
+      <button onClick={Increment}>+</button>
 
-            <h1>Counter : {counter}</h1>
-
-            <button onClick={Increment}>+</button>
-        </div>
-    )
-
+      <h3>The use effect is triggered on : </h3>
+      <p>Initial page render</p>
+      <p>any state change</p>
+    </div>
+  );
 }
 
 export default UseEffect;
