@@ -10,7 +10,7 @@ function UseEffect() {
   useEffect(() => {
     console.log("use effect is triggered");
     alert("Use effect is triggered");
-  }, []); // empty dependency
+  }); // empty dependency
 
   return (
     <div>

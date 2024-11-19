@@ -19,6 +19,18 @@ function Home() {
   function UseStateTwo() {
     router("/use-state-two");
   }
+  function UseEffect () {
+    router("/use-effect");
+  }
+  function UseEffectTwo () {
+    router("/use-effect-2");
+  }
+  function UseEffectThree () {
+    router("/use-effect-3");
+  }
+  function UseEffectFour () {
+    router("/use-effect-4");
+  }
 
   return (
     <div>
@@ -28,7 +40,11 @@ function Home() {
       <button onClick={RegisterPage}>Register</button>
       <button onClick={ProductPage}>Product</button>
       <button onClick={UseStatePage}>Use State</button>
-      <button onClick={UseStateTwo}>Use State Two</button>
+      <button onClick={UseStateTwo}>Use State 2</button>
+      <button onClick={UseEffect}>Use Effect </button>
+      <button onClick={UseEffectTwo}>Use Effect 2</button>
+      <button onClick={UseEffectThree}>Use Effect 3</button>
+      <button onClick={UseEffectFour}>Use Effect 4</button>
     </div>
   );
 }
