@@ -19,17 +19,21 @@ function Home() {
   function UseStateTwo() {
     router("/use-state-two");
   }
-  function UseEffect () {
+  function UseEffect() {
     router("/use-effect");
   }
-  function UseEffectTwo () {
+  function UseEffectTwo() {
     router("/use-effect-2");
   }
-  function UseEffectThree () {
+  function UseEffectThree() {
     router("/use-effect-3");
   }
-  function UseEffectFour () {
+  function UseEffectFour() {
     router("/use-effect-4");
+  }
+
+  function DynamicData() {
+    router("/dynamic-routing/10");
   }
 
   return (
@@ -45,6 +49,7 @@ function Home() {
       <button onClick={UseEffectTwo}>Use Effect 2</button>
       <button onClick={UseEffectThree}>Use Effect 3</button>
       <button onClick={UseEffectFour}>Use Effect 4</button>
+      <button onClick={DynamicData}>Dynamic Routing</button>
     </div>
   );
 }
