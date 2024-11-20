@@ -30,7 +30,7 @@ function App() {
         <Route path="/use-effect-4" element={<UseEffect4 />} />
         <Route
           path="/dynamic-routing/:productId"
-          element={<DynamicRouting />}
+          element={<DynamicRouting />}  // productId is dynamic so written : before
         />
       </Routes>
     </div>

@@ -19,9 +19,11 @@ function UseState() {
     setCounter(counter - 1);
   }
 
-  function DynamicPage () {
-    router("/dynamic-routing/100")
+  function DynamicPage (){
+    router(`/dynamic-routing/${counter}`); // we can use variable template litterals to send placeholders like ${counter} which on submissions send its value
   }
+
+
   return (
     <div>
       <h1>Counter Component</h1>
@@ -29,7 +31,7 @@ function UseState() {
       <button onClick={Increment}>+</button>
       <button onClick={Reset}>Reset</button>
       <button onClick={Decrement}>-</button>
-      <button onClick={DynamicPage}>Dynamic Routing</button>
+      <button onClick={DynamicPage}>Dynamic Page</button>
 
       
     </div>

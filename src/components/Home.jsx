@@ -33,7 +33,7 @@ function Home() {
   }
 
   function DynamicData() {
-    router("/dynamic-routing/10");
+    router("/dynamic-routing/1000");
   }
 
   return (
