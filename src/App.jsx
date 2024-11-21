@@ -12,8 +12,72 @@ import UseEffect2 from "./components/Day-06/UseEffect2";
 import UseEffect3 from "./components/Day-06/UseEffect3";
 import UseEffect4 from "./components/Day-06/UseEffect4";
 import DynamicRouting from "./components/Day-06/DynamicRouting";
+import PropDrilling from "./components/Day-06/PropDrilling";
+import { useState } from "react";
 
 function App() {
+  const [students, setStudents] = useState(["Rohit", "Rahul", "Virat"]);
+  const [data, setData] = useState([
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },
+        {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    },    {
+      image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
+      name: "Legendary T-Shirt",
+      price: 799,
+    }
+  ]);
   return (
     <div className="App">
       <Routes>
@@ -30,7 +94,11 @@ function App() {
         <Route path="/use-effect-4" element={<UseEffect4 />} />
         <Route
           path="/dynamic-routing/:productId"
-          element={<DynamicRouting />}  // productId is dynamic so written : before
+          element={<DynamicRouting />} // productId is dynamic so written : before
+        />
+        <Route
+          path="/prop-drilling"
+          element={<PropDrilling students={students} data={data} />}
         />
       </Routes>
     </div>
