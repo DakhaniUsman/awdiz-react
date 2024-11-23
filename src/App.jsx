@@ -97,7 +97,7 @@ function App() {
           element={<DynamicRouting />} // productId is dynamic so written : before
         />
         <Route
-          path="/prop-drilling"
+          path="/prop-drilling-mapping"
           element={<PropDrilling students={students} data={data} />}
         />
       </Routes>

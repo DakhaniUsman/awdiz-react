@@ -36,6 +36,10 @@ function Home() {
     router("/dynamic-routing/1000");
   }
 
+  function PropDrillingPage () {
+    router("/prop-drilling-mapping")
+  }
+
   return (
     <div>
       <h1>Welcome To Home Page</h1>
@@ -50,6 +54,7 @@ function Home() {
       <button onClick={UseEffectThree}>Use Effect 3</button>
       <button onClick={UseEffectFour}>Use Effect 4</button>
       <button onClick={DynamicData}>Dynamic Routing</button>
+      <button onClick={PropDrillingPage}>Prop Drilling Page</button>
     </div>
   );
 }
