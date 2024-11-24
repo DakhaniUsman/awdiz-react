@@ -16,9 +16,21 @@ function Register() {
 
   console.log(UserData);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     // call api for storing name in backend, name, eamil, password, confirm pass submit krenge
     event.preventDefault();
+
+    
+    try {
+      // const response = await axios.get("/api-link", {UserData} );
+      const response = alert("Your have resgitered successfully")
+      
+      // if (response.data.success){
+        // success : true then execute this
+      // }
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
   }
 
   function handleChange(event) {
