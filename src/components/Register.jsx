@@ -7,25 +7,27 @@ function Register() {
     fontSize: "20px",
   };
 
-  const [name, setName] = useState("");
-  const [email,setEmail] =useState("");
-  // console.log(name,"name");
+  const [UserData, setUserData] = useState({
+    username: "",
+    useremail: "",
+    userpassword: "",
+    userconfirmpassword: "",
+  });
 
-  function handleSubmit() {
+  console.log(UserData);
+
+  function handleSubmit(event) {
     // call api for storing name in backend, name, eamil, password, confirm pass submit krenge
+    event.preventDefault();
   }
 
-  function handleNameChange(event) {
+  function handleChange(event) {
     // input me jo type kiya hai wo state me store kro
     //  event is inbuilt form function used to access attributes values of elements in form
     console.log(event.target.value, event.target.name);
-    // console.log(event.target.value);  
-    setName(event.target.value);
-  }
-
-  function handleEmailChange (event) {
-    console.log(event.target.value, event.target.name);
-    setEmail(event.target.value);
+    // console.log(event.target.value);
+    setUserData({ ...UserData, [event.target.name]: event.target.value });
+    // ...UserData is spread operator that creates an instance to store all the values including the previous value
   }
 
   return (
@@ -33,31 +35,61 @@ function Register() {
       <h1>Register your email ID </h1>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name : {name} </label>
+        <label htmlFor="name">Enter your name </label>
         <br />
         <input
           type="text"
           name="username"
           id="name"
           style={inputField}
-          onChange={handleNameChange}
+          onChange={handleChange}
         />
         <br />
 
-        <label htmlFor="name">Enter your email : {email} </label>
+        <label htmlFor="useremail">Enter your email </label>
         <br />
         <input
           type="email"
           name="useremail"
           id="useremail"
           style={inputField}
-          onChange={handleEmailChange}
+          onChange={handleChange}
         />
         <br />
 
-        <button type="submit" onClick={Register}>
-          Click to Submit
-        </button>
+        <label htmlFor="userpassword">Enter your password </label>
+        <br />
+        <input
+          type="password"
+          name="userpassword"
+          id="useremail"
+          style={inputField}
+          onChange={handleChange}
+        />
+        <br />
+
+        <label htmlFor="userconfirmpassword">Confirm password </label>
+        <br />
+        <input
+          type="password"
+          name="userconfirmpassword"
+          id="useremail"
+          style={inputField}
+          onChange={handleChange}
+        />
+        <br />
+
+        <input
+          type="submit"
+          value="Click to register"
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "white",
+            border: "1px solid mediumslateblue",
+            borderRadius: "10px ",
+            fontSize: "1.2rem",
+           }}
+        />
       </form>
     </div>
   );
