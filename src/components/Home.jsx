@@ -36,8 +36,12 @@ function Home() {
     router("/dynamic-routing/1000");
   }
 
-  function PropDrillingPage () {
-    router("/prop-drilling-mapping")
+  function PropDrillingPage() {
+    router("/prop-drilling-mapping");
+  }
+
+  function FakeProductsPage() {
+    router("/fake-product-api");
   }
 
   return (
@@ -55,6 +59,8 @@ function Home() {
       <button onClick={UseEffectFour}>Use Effect 4</button>
       <button onClick={DynamicData}>Dynamic Routing</button>
       <button onClick={PropDrillingPage}>Prop Drilling Page</button>
+
+      <button onClick={FakeProductsPage}>Fake Products Page</button>
     </div>
   );
 }

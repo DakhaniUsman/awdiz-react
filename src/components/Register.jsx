@@ -20,13 +20,23 @@ function Register() {
     // call api for storing name in backend, name, eamil, password, confirm pass submit krenge
     event.preventDefault();
 
-    
+    if (
+      !UserData.username &&
+      !UserData.useremail &&
+      !UserData.userpassword &&
+      !UserData.userconfirmpassword
+    ) {
+      return alert("Please fill all the input fields!");
+    }  
+
+    // Basic for validation check wheter user has filled all the fields
+
     try {
       // const response = await axios.get("/api-link", {UserData} );
-      const response = alert("Your have resgitered successfully")
-      
+      const response = alert("Your have resgitered successfully");
+
       // if (response.data.success){
-        // success : true then execute this
+      // success : true then execute this
       // }
     } catch (error) {
       console.log(error.response.data.message);
@@ -100,7 +110,7 @@ function Register() {
             border: "1px solid mediumslateblue",
             borderRadius: "10px ",
             fontSize: "1.2rem",
-           }}
+          }}
         />
       </form>
     </div>

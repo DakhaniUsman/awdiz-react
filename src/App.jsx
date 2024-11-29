@@ -14,6 +14,8 @@ import UseEffect4 from "./components/Day-06/UseEffect4";
 import DynamicRouting from "./components/Day-06/DynamicRouting";
 import PropDrilling from "./components/Day-06/PropDrilling";
 import { useState } from "react";
+import FakeProducts from "./components/Day-08/FakeProducts";
+import SingleFakeProduct from "./components/Day-08/SingleFakeProduct";
 
 function App() {
   const [students, setStudents] = useState(["Rohit", "Rahul", "Virat"]);
@@ -99,6 +101,11 @@ function App() {
         <Route
           path="/prop-drilling-mapping"
           element={<PropDrilling students={students} data={data} />}
+        />
+        <Route path="/fake-product-api"  element={<FakeProducts />}/>
+        <Route
+          path="/single-fake-product/:productId"
+          element={<SingleFakeProduct />}
         />
       </Routes>
     </div>
