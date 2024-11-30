@@ -88,7 +88,7 @@ function FakeProducts() {
               <div
                 style={{
                   height: "auto",
-                  width: "200px",
+                  width: "22%",
                   boxShadow: "0px 0px 10px #aaa",
                   marginBottom: "1em",
                   padding: "10px",
