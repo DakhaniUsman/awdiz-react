@@ -44,6 +44,14 @@ function Home() {
     router("/fake-product-api");
   }
 
+  function DynamicCssPage (){
+    router("/dynamic-css")
+  }
+
+  function UseReducerPage (){
+    router("/use-reducer")
+  }
+
   return (
     <div>
       <h1>Welcome To Home Page</h1>
@@ -61,6 +69,8 @@ function Home() {
       <button onClick={PropDrillingPage}>Prop Drilling Page</button>
 
       <button onClick={FakeProductsPage}>Fake Products Page</button>
+      <button onClick={DynamicCssPage}>Dynamic Css Page</button>
+      <button onClick={UseReducerPage}>Use Reducer Page</button>
     </div>
   );
 }

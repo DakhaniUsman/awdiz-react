@@ -1,0 +1,24 @@
+.dynamic-div{
+    padding-top: 2em;
+}
+
+.active{
+    background-color: mediumseagreen;
+    border: 1px solid mediumseagreen;
+    color: black;
+}
+
+.active:hover{
+    background-color: mediumseagreen;
+}
+
+.inactive{
+    background-color: red ;
+    border: 1px solid red;
+    color: white;
+
+}
+
+.inactive:hover{
+    background-color: red;
+}

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -13,9 +13,11 @@ import UseEffect3 from "./components/Day-06/UseEffect3";
 import UseEffect4 from "./components/Day-06/UseEffect4";
 import DynamicRouting from "./components/Day-06/DynamicRouting";
 import PropDrilling from "./components/Day-06/PropDrilling";
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import FakeProducts from "./components/Day-08/FakeProducts";
 import SingleFakeProduct from "./components/Day-08/SingleFakeProduct";
+import DynamicCss from "./components/Day-09/DynamicCss";
+import UseReducer from "./components/Day-09/UseReducer";
 
 function App() {
   const [students, setStudents] = useState(["Rohit", "Rahul", "Virat"]);
@@ -70,11 +72,11 @@ function App() {
       name: "Legendary T-Shirt",
       price: 799,
     },
-        {
+    {
       image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
       name: "Legendary T-Shirt",
       price: 799,
-    },    {
+    }, {
       image: "https://m.media-amazon.com/images/I/814dmJXctHL._AC_UL320_.jpg",
       name: "Legendary T-Shirt",
       price: 799,
@@ -102,14 +104,28 @@ function App() {
           path="/prop-drilling-mapping"
           element={<PropDrilling students={students} data={data} />}
         />
-        <Route path="/fake-product-api"  element={<FakeProducts />}/>
+        <Route path="/fake-product-api" element={<FakeProducts />} />
         <Route
           path="/single-fake-product/:productId"
           element={<SingleFakeProduct />}
         />
+        <Route path="/dynamic-css" element={<DynamicCss />} />
+        <Route path="/use-reducer" element={<UseReducer />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
+
+// useNavigate
+// useState
+// useEffect
+// useParams
+
+// useReducer
+// context
+// useMemo
+// useCallback
+// useRef
+// redux
