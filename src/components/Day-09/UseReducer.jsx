@@ -10,11 +10,11 @@ function UseReducer() {
 
         switch (action.type) {
             case "INCREMENT":
-                return { counter: state.counter + 1 }
+                return {...state, counter: state.counter + 1 }
             case "DECREMENT":
-                return { counter: state.counter - 1 }
+                return { ...state,counter: state.counter - 1 }
             case "RESET":
-                return { counter: 0 }
+                return { ...state,counter: 0 }
             default:
                 return state;
 
@@ -24,7 +24,7 @@ function UseReducer() {
     }
 
 
-    const InitialState = { counter: 0 };
+    const InitialState = { counter: 0 , counter2 : 100 };
 
     const [state, dispatch] = useReducer(Reducer, InitialState);
     console.log(state, "state")
