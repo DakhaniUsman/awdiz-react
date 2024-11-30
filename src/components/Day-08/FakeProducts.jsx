@@ -88,7 +88,7 @@ function FakeProducts() {
               <div
                 style={{
                   height: "auto",
-                  width: "22%",
+                  width: "200px",
                   boxShadow: "0px 0px 10px #aaa",
                   marginBottom: "1em",
                   padding: "10px",
@@ -103,6 +103,7 @@ function FakeProducts() {
                 />
                 <h4>Name : {product.title}</h4>
                 <p>Price : {product.price}</p>
+                <button>Order Now</button>
               </div>
             ))}
           </div>
