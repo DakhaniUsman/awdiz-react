@@ -52,6 +52,10 @@ function Home() {
     router("/use-reducer")
   }
 
+  function UseMemoPage (){
+    router("/use-memo")
+  }
+
   return (
     <div>
       <h1>Welcome To Home Page</h1>
@@ -71,6 +75,8 @@ function Home() {
       <button onClick={FakeProductsPage}>Fake Products Page</button>
       <button onClick={DynamicCssPage}>Dynamic Css Page</button>
       <button onClick={UseReducerPage}>Use Reducer Page</button>
+      <button onClick={UseReducerPage}>Use Reducer Page</button>
+      <button onClick={UseMemoPage}>Use Memo Page</button>
     </div>
   );
 }
