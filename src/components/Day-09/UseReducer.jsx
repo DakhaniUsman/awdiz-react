@@ -1,65 +1,96 @@
 import { useReducer } from "react";
 
-function UseReducer() {
+function Reducer(state, action) {
+  // state={coutner : 0}, action = { type : "INCREMENT"}
+  console.log(state, action, "state", "action");
 
-    function Reducer(state, action) {
-        // state={coutner : 0}, action = { type : "INCREMENT"}
-        console.log(state, action, "state", "action");
+  // This is our custom logic
 
-        // This is our custom logic
-
-        switch (action.type) {
-            case "INCREMENT":
-                return {...state, counter: state.counter + 1 }
-            case "DECREMENT":
-                return { ...state,counter: state.counter - 1 }
-            case "RESET":
-                return { ...state,counter: 0 }
-            default:
-                return state;
-
-        }
-
-
-    }
-
-
-    const InitialState = { counter: 0 , counter2 : 100 };
-
-    const [state, dispatch] = useReducer(Reducer, InitialState);
-    console.log(state, "state")
-
-    function Increment() {
-        dispatch({ type: "INCREMENT" })
-        // action = {type : "INCREMENT"}
-    }
-
-    function Decrement() {
-        dispatch({ type: "DECREMENT" })
-        // action = {type : "DECREMENT"}
-    }
-
-    function Reset() {
-        dispatch({ type: "RESET" })
-        // action = {type : "RESET"}
-    }
-
-    return (
-        <div>
-            <h1>Use Reducer Page</h1>
-
-            <h1>Counter : {state.counter}</h1>
-            <button onClick={Increment}>+</button>
-            <button onClick={Decrement}>-</button>
-            <button onClick={Reset}>Reset</button>
-
-        </div>
-    )
+  switch (action.type) {
+    case "INCREMENT":
+      return { ...state, counter: state.counter + 1 };
+    case "DECREMENT":
+      return { ...state, counter: state.counter - 1 };
+    case "RESET":
+      return { ...state, counter: 0 };
+    default:
+      return state;
+  }
 }
 
+// switch (key) {
+//     case value:
+//      code
+//         break;
+
+//     default:
+//         break;
+// }
+
+const InitialState = { counter: 0, counter2: 100 };
+
+const UseReducer = () => {
+  const [state, dispatch] = useReducer(Reducer, InitialState);
+  console.log(state, "state");
+
+  function Increment() {
+    dispatch({ type: "INCREMENT" });
+    // action = {type : "INCREMENT"}
+  }
+
+  function Decrement() {
+    dispatch({ type: "DECREMENT" });
+    // action = {type : "DECREMENT"}
+  }
+
+  function Reset() {
+    dispatch({ type: "RESET" });
+    // action = {type : "RESET"}
+  }
+
+  return (
+    <div>
+      <h1>Use Reducer Page</h1>
+
+      <h1>Counter : {state.counter}</h1>
+      <button onClick={Increment}>+</button>
+      <button onClick={Decrement}>-</button>
+      <button onClick={Reset}>Reset</button>
+    </div>
+  );
+};
+
+// function Reducer(state, action) {
+//   // action = {type : "INCREMENT"}
+
+//   // custom state logic
+//   switch (action.type) {
+//     case "INCREMENT":
+//       return { ...state, counter: state.counter + 1 };
+//     case "DECREMENT":
+//       return { ...state, counter: state.counter - 1 };
+//     case "RESET":
+//       return { ...state, counter: 0 };
+//     default:
+//       return state;
+//   }
+// }
+
+// const InitialState = { counter: 0 };
+
+// const [state, dispatch] = useReducer(Reducer, InitialState);
+
+// function Increment() {
+//   dispatch({ type: "INCREMENT" });
+// }
+// function Decrement() {
+//   dispatch({ type: "DECREMENT" });
+// }
+// function Reset() {
+//   dispatch({ type: "RESET" });
+// }
+
 export default UseReducer;
-
-
 
 // reducer use state jaise hota hai similar
 // used to write custom state logic

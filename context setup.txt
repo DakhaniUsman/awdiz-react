@@ -1,0 +1,7 @@
+1. Create seperate file for feature
+
+2. Create context instance  and  HOC
+
+3. Provide 
+
+4. Consume

@@ -44,16 +44,20 @@ function Home() {
     router("/fake-product-api");
   }
 
-  function DynamicCssPage (){
-    router("/dynamic-css")
+  function DynamicCssPage() {
+    router("/dynamic-css");
   }
 
-  function UseReducerPage (){
-    router("/use-reducer")
+  function UseReducerPage() {
+    router("/use-reducer");
   }
 
-  function UseMemoPage (){
-    router("/use-memo")
+  function UseMemoPage() {
+    router("/use-memo");
+  }
+
+  function CounterContextPage() {
+    router("/counter-context");
   }
 
   return (
@@ -75,8 +79,8 @@ function Home() {
       <button onClick={FakeProductsPage}>Fake Products Page</button>
       <button onClick={DynamicCssPage}>Dynamic Css Page</button>
       <button onClick={UseReducerPage}>Use Reducer Page</button>
-      <button onClick={UseReducerPage}>Use Reducer Page</button>
       <button onClick={UseMemoPage}>Use Memo Page</button>
+      <button onClick={CounterContextPage}>Counter Context Page</button>
     </div>
   );
 }

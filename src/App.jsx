@@ -19,6 +19,7 @@ import SingleFakeProduct from "./components/Day-08/SingleFakeProduct";
 import DynamicCss from "./components/Day-09/DynamicCss";
 import UseReducer from "./components/Day-09/UseReducer";
 import UseMemo from "./components/Day-11/UseMemo";
+import CounterContext from "./components/Day-10/CounterContext";
 
 function App() {
   const [students, setStudents] = useState(["Rohit", "Rahul", "Virat"]);
@@ -113,6 +114,7 @@ function App() {
         <Route path="/dynamic-css" element={<DynamicCss />} />
         <Route path="/use-reducer" element={<UseReducer />} />
         <Route path="/use-memo" element={<UseMemo />} />
+        <Route path="/counter-context"  element={<CounterContext />}/>
       </Routes>
     </div>
   );
