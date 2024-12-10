@@ -20,6 +20,7 @@ import DynamicCss from "./components/Day-09/DynamicCss";
 import UseReducer from "./components/Day-09/UseReducer";
 import UseMemo from "./components/Day-11/UseMemo";
 import CounterContext from "./components/Day-10/CounterContext";
+import UseCallback from "./components/Day-12/UseCallback";
 
 function App() {
   const [students, setStudents] = useState(["Rohit", "Rahul", "Virat"]);
@@ -113,8 +114,9 @@ function App() {
         />
         <Route path="/dynamic-css" element={<DynamicCss />} />
         <Route path="/use-reducer" element={<UseReducer />} />
-        <Route path="/use-memo" element={<UseMemo />} />
         <Route path="/counter-context"  element={<CounterContext />}/>
+        <Route path="/use-memo" element={<UseMemo />} />
+        <Route path="/use-callback" element={<UseCallback />} />
       </Routes>
     </div>
   );

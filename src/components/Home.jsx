@@ -60,6 +60,10 @@ function Home() {
     router("/counter-context");
   }
 
+  function UseCallbakPage() {
+    router("/use-callback");
+  }
+
   return (
     <div>
       <h1>Welcome To Home Page</h1>
@@ -79,8 +83,9 @@ function Home() {
       <button onClick={FakeProductsPage}>Fake Products Page</button>
       <button onClick={DynamicCssPage}>Dynamic Css Page</button>
       <button onClick={UseReducerPage}>Use Reducer Page</button>
-      <button onClick={UseMemoPage}>Use Memo Page</button>
       <button onClick={CounterContextPage}>Counter Context Page</button>
+      <button onClick={UseMemoPage}>Use Memo Page</button>
+      <button onClick={UseCallbakPage}>Use Callback Page</button>
     </div>
   );
 }

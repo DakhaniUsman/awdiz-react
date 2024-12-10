@@ -1,0 +1,8 @@
+.children-component{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: max-content;
+    padding: 20px;
+    margin: auto;
+    background-color: mediumaquamarine;
+}
