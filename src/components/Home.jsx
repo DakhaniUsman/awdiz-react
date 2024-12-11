@@ -63,6 +63,13 @@ function Home() {
   function UseCallbakPage() {
     router("/use-callback");
   }
+  function UseRefPage() {
+    router("/use-ref");
+  }
+
+  function StopwatchPage() {
+    router("/stopwatch");
+  }
 
   return (
     <div>
@@ -86,6 +93,8 @@ function Home() {
       <button onClick={CounterContextPage}>Counter Context Page</button>
       <button onClick={UseMemoPage}>Use Memo Page</button>
       <button onClick={UseCallbakPage}>Use Callback Page</button>
+      <button onClick={UseRefPage}>Use Ref Page</button>
+      <button onClick={StopwatchPage}>Stopwatch Page</button>
     </div>
   );
 }

@@ -21,6 +21,8 @@ import UseReducer from "./components/Day-09/UseReducer";
 import UseMemo from "./components/Day-11/UseMemo";
 import CounterContext from "./components/Day-10/CounterContext";
 import UseCallback from "./components/Day-12/UseCallback";
+import UseRef from "./components/Day-13/UseRef";
+import Stopwatch from "./components/Day-13/Stopwatch";
 
 function App() {
   const [students, setStudents] = useState(["Rohit", "Rahul", "Virat"]);
@@ -117,6 +119,8 @@ function App() {
         <Route path="/counter-context"  element={<CounterContext />}/>
         <Route path="/use-memo" element={<UseMemo />} />
         <Route path="/use-callback" element={<UseCallback />} />
+        <Route path="/use-ref" element={<UseRef />} />
+        <Route path="/stopwatch" element={<Stopwatch />} />
       </Routes>
     </div>
   );
@@ -128,10 +132,10 @@ export default App;
 // useState
 // useEffect
 // useParams
-
 // useReducer
 // context
 // useMemo
 // useCallback
+
 // useRef
 // redux
