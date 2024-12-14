@@ -35,6 +35,7 @@ const Stopwatch = () => {
     return (
         <div>
             <h1>Time Passed : {secondsPassed.toFixed(3)}</h1>
+            
             <button onClick={handleStart}>Start</button>
             <button onClick={handleStop}>Stop</button>
 
@@ -44,4 +45,4 @@ const Stopwatch = () => {
 
 export default Stopwatch;
 
-// Date.now() sets 
+// Date.now() sets
