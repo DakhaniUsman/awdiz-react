@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -13,7 +13,7 @@ import UseEffect3 from "./components/Day-06/UseEffect3";
 import UseEffect4 from "./components/Day-06/UseEffect4";
 import DynamicRouting from "./components/Day-06/DynamicRouting";
 import PropDrilling from "./components/Day-06/PropDrilling";
-import { useReducer, useState } from "react";
+import { useState } from "react";
 import FakeProducts from "./components/Day-08/FakeProducts";
 import SingleFakeProduct from "./components/Day-08/SingleFakeProduct";
 import DynamicCss from "./components/Day-09/DynamicCss";

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 function DynamicRouting() {
-  const { productId } = useParams(); // here we are extractinf=g productId from route using useParams() hook
+  const { productId } = useParams(); // here we are extracting productId from route using useParams() hook
   useEffect(() => {
     if (productId) {
       console.log(`product ${productId} is fetched`);
