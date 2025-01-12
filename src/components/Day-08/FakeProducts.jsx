@@ -28,7 +28,7 @@ function FakeProducts() {
         const response = await axios.get(
           `https://fakestoreapi.com/products?limit=${event.target.value}`
         );
-        // console.log(response.data);
+        // console.log(response.data);  
         setProducts(response.data);
       } catch (error) {
         console.log(error);
